@@ -5,4 +5,5 @@ jdk:
 script:
  - ./gradlew clean
  - ./gradlew check
+ - ./gradlew clean
  - ./gradlew seleniumXvfb
