@@ -13,4 +13,4 @@ deploy:
  app: amazinggames
  api_key: e259cfed-ca31-4ac7-bad6-787620b3561e
  strategy: git
- on: production
+ on: TravisAndHeroku
