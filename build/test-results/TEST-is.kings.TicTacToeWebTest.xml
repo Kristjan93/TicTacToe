@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="is.kings.TicTacToeWebTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2014-11-01T18:57:14" hostname="i-d8dcceb3" time="36.476">
+  <properties/>
+  <testcase name="testSeleniumH1" classname="is.kings.TicTacToeWebTest" time="7.594"/>
+  <testcase name="testSelenuimInputChar" classname="is.kings.TicTacToeWebTest" time="4.59"/>
+  <testcase name="testSelenuimInputSameNumberTwice" classname="is.kings.TicTacToeWebTest" time="4.798"/>
+  <testcase name="testSelenuimParagraph" classname="is.kings.TicTacToeWebTest" time="3.975"/>
+  <testcase name="testSelenuimGameOver" classname="is.kings.TicTacToeWebTest" time="5.879"/>
+  <testcase name="testSelenuimTooLargeNumber" classname="is.kings.TicTacToeWebTest" time="5.013"/>
+  <testcase name="testSelenuimTooSmallNumber" classname="is.kings.TicTacToeWebTest" time="4.612"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

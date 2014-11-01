@@ -8,6 +8,8 @@ script:
  - ./gradlew clean
  - ./gradlew seleniumXvfb
 
+before_deploy:
+ - ./gradlew clean
 deploy:
  provider: heroku
  app: amazinggames
