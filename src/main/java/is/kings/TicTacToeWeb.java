@@ -72,7 +72,11 @@ public class TicTacToeWeb implements SparkApplication{
                                         return gridOut;
 				}
 				//Insert the copmuter's move to the input.
-				while(!cPlayer.computerMove(grid)){}
+				while(true){
+					if(cPlayer.computerMove(grid)){
+						break;
+					}
+				}
 				//Check if the computer wins.
 				if(grid.gameConclusion()){
                                         StringBuilder html = new StringBuilder();

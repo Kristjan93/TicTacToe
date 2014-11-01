@@ -56,7 +56,7 @@ public class HumanPlayer{
 
 	private boolean isNumberNotInTheRightRange(int inputNumber){
 		//Is 1 <= inputNumber <= 9,, if not return false.
-		return (inputNumber < 1 || inputNumber > 9);
+		return inputNumber < 1 || inputNumber > 9;
 	}
 
 }

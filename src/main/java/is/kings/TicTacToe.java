@@ -14,8 +14,7 @@ public class TicTacToe{
 		ComputerPlayer computer = new ComputerPlayer();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		//This loop will run while the game is not over.
-		while(!gameGrid.gameConclusion())
-		{
+		while(!gameGrid.gameConclusion()){
 			String humanInput = "";
 			System.out.println("Please enter a number from 1-9");
 			try{
@@ -45,7 +44,10 @@ public class TicTacToe{
 			}
 			System.out.println("Computer's turn");
 			//Run this loop while the computer find an occupied grid position. 
-			while(!computer.computerMove(gameGrid)){
+			while(true){
+				if(computer.computerMove(gameGrid)){
+					break;
+				}
 			}
 			System.out.println(gameGrid.printGrid());
 			//Check if the computer wins.
