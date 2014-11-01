@@ -5,12 +5,4 @@ jdk:
 script:
  - ./gradlew clean
  - ./gradlew check
-
-before_deploy:
  - ./gradlew seleniumXvfb
- - ./gradlew clean
-
-deploy:
-  provider: heroku
-  app: amazinggames # optional if it's the same as your repo name
-  api_key: "e259cfed-ca31-4ac7-bad6-787620b3561e"
