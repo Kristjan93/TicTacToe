@@ -83,7 +83,7 @@ jar{
 		attributes("Main-Class": "is.kings.TicTacToe")
 	}
 }
-task stage { dependsOn installApp }
+task stage { dependsOn clean,  installApp }
 
 jacocoTestReport {
     reports {
