@@ -6,6 +6,7 @@ script:
  - ./gradlew clean
  - ./gradlew check
  - ./gradlew seleniumXvfb
+ - ./gradlew clean
 
 deploy:
   provider: heroku
