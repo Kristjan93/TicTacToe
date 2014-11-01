@@ -67,7 +67,7 @@ public class TicTacToeWeb implements SparkApplication{
 				if(grid.gameConclusion()){
 					StringBuilder html = new StringBuilder();
                                         html.append("<pre>").append(grid.printGrid()).append("</pre>");
-                                        html.append("<pre>").append("YOU WIN!!!!").append("</pre>");
+                                        html.append("<pre>").append("YOU WIN!!!!1!!1!").append("</pre>");
                                         String gridOut = html.toString();
                                         return gridOut;
 				}
