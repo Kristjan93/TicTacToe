@@ -7,11 +7,21 @@
  * user guide available at http://gradle.org/docs/2.1/userguide/tutorial_java_projects.html
  */
 
+buildscript { 
+  repositories {
+    jcenter()
+  }  
+  dependencies {
+    classpath 'org.ysb33r.gradle:doxygen:0.2'
+  }
+}
+
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'pmd'
+apply plugin: 'org.ysb33r.doxygen'
 
 mainClassName = "is.kings.TicTacToeWeb"
 // In this section you declare where to find the dependencies of your project
@@ -36,7 +46,7 @@ dependencies {
 
     seleniumXvfbCompile 'junit:junit:4.11'
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
-    
+
     // Declare the dependency for your favourite test framework you want to use in your tests.
     // TestNG is also supported by the Gradle Test task. Just change the
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
@@ -85,10 +95,40 @@ jar{
 }
 task stage { dependsOn clean,  installApp }
 
-jacocoTestReport {
-    reports {
-        xml.enabled false
+jacocoTestReport{
+   executionData test, seleniumXvfb
+   
+   reports {
+
+	xml.enabled false
         csv.enabled false
         html.destination "${buildDir}/jacocoHtml"
-    }
+   }
+}
+task mergedData(type: JacocoMerge) {
+    // can pass in any task set up for Jacoco
+    executionData test, seleniumXvfb
+}
+task jacocoReport(type: JacocoReport) {
+    // can include one or more execution files
+    executionData test, seleniumXvfb
+
+   reports {
+
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/jacocoMerge"
+   }
+    // specify one or more source sets that you want to report on the coverage of
+    sourceSets project.sourceSets.main
+
+    // can also specify additional class and source dirs
+    // additionalClassDirs moreStuff
+    // additionalSourceDirs moreSourceStuff
+}
+doxygen{
+ generate_html true
+ generate_latex false
+ source new File(projectDir, 'src/main/java/is/kings') 
+
 }

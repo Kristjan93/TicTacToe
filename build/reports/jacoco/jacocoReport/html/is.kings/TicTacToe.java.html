@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>TicTacToe.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TicTacToe</a> &gt; <a href="index.source.html" class="el_package">is.kings</a> &gt; <span class="el_source">TicTacToe.java</span></div><h1>TicTacToe.java</h1><pre class="source lang-java linenums">package is.kings;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+ /**
+ * A class that will play the game.
+ */
+<span class="nc" id="L9">public class TicTacToe{</span>
+
+	public static void main(String[] args){
+<span class="nc" id="L12">		Grid gameGrid = new Grid();</span>
+<span class="nc" id="L13">		HumanPlayer human = new HumanPlayer();</span>
+<span class="nc" id="L14">		ComputerPlayer computer = new ComputerPlayer();</span>
+<span class="nc" id="L15">		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));</span>
+		//This loop will run while the game is not over.
+<span class="nc bnc" id="L17" title="All 2 branches missed.">		while(!gameGrid.gameConclusion()){</span>
+<span class="nc" id="L18">			String humanInput = &quot;&quot;;</span>
+<span class="nc" id="L19">			System.out.println(&quot;Please enter a number from 1-9&quot;);</span>
+			try{
+<span class="nc" id="L21">				humanInput = br.readLine();</span>
+			}
+<span class="nc" id="L23">			catch(Exception e){</span>
+<span class="nc" id="L24">				e.printStackTrace();</span>
+<span class="nc" id="L25">			}</span>
+			//Run this loop while the human input is not correct.
+<span class="nc bnc" id="L27" title="All 2 branches missed.">			while(!human.checkInput(humanInput)){</span>
+<span class="nc" id="L28">				System.out.println(&quot;Please enter a number from 1-9&quot;);</span>
+				try{
+<span class="nc" id="L30">                                	humanInput = br.readLine(); </span>
+                        	}
+<span class="nc" id="L32">                        	catch(Exception e){</span>
+<span class="nc" id="L33">                                	e.printStackTrace();</span>
+<span class="nc" id="L34">                        	}</span>
+			}
+			//If human move is unsuccessful, then continue
+<span class="nc bnc" id="L37" title="All 2 branches missed.">			if(!human.playerMove(gameGrid, Integer.parseInt(humanInput))){</span>
+<span class="nc" id="L38">				continue;</span>
+			}
+<span class="nc" id="L40">			System.out.println(gameGrid.printGrid());</span>
+			//Check if the human wins.
+<span class="nc bnc" id="L42" title="All 2 branches missed.">			if(gameGrid.gameConclusion()){</span>
+<span class="nc" id="L43">				return;</span>
+			}
+<span class="nc" id="L45">			System.out.println(&quot;Computer's turn&quot;);</span>
+			//Run this loop while the computer find an occupied grid position. 
+			while(true){
+<span class="nc bnc" id="L48" title="All 2 branches missed.">				if(computer.computerMove(gameGrid)){</span>
+<span class="nc" id="L49">					break;</span>
+				}
+			}
+<span class="nc" id="L52">			System.out.println(gameGrid.printGrid());</span>
+			//Check if the computer wins.
+<span class="nc bnc" id="L54" title="All 2 branches missed.">			if(gameGrid.gameConclusion()){</span>
+<span class="nc" id="L55">				return;</span>
+			}
+<span class="nc" id="L57">		}</span>
+<span class="nc" id="L58">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>
