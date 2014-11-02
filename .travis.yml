@@ -14,5 +14,8 @@ deploy:
  strategy: git
  on: jacocoTestReportFix
 
+env:
+- TERM=dumb
+
 after_success:
 - ./gradlew jacocoTestReport coveralls
