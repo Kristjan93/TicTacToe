@@ -97,7 +97,7 @@ jacocoTestReport{
    }
 }
 
-<<<<<<< HEAD
+
 buildscript {
     repositories {
         mavenCentral()
@@ -107,5 +107,3 @@ buildscript {
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
     }
 }
-=======
->>>>>>> 3ec6945aa9ec24d50b5ecb1d993a3175ff48ab92
