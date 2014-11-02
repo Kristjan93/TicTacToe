@@ -6,6 +6,16 @@
  * For more details take a look at the Java Quickstart chapter in the Gradle
  * user guide available at http://gradle.org/docs/2.1/userguide/tutorial_java_projects.html
  */
+//Import the doxygen dependency
+import org.ysb33r.gradle.doxygen.Doxygen;
+buildscript { 
+  repositories {
+    jcenter()
+  }  
+  dependencies {
+    classpath 'org.ysb33r.gradle:doxygen:0.2'
+  }
+}
 
 
 // Apply the java plugin to add support for Java
@@ -96,3 +106,9 @@ jacocoTestReport{
    }
 }
 
+task doxyDoc(type:Doxygen){
+ generate_html true
+ generate_latex false
+ exclude 'TicTacToe.java', 'TicTacToeWeb.java'
+ source new File(projectDir, 'src/main/java/is/kings')
+}
