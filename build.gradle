@@ -12,6 +12,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'pmd'
+apply plugin: 'com.github.kt3k.coveralls'
 
 mainClassName = "is.kings.TicTacToeWeb"
 // In this section you declare where to find the dependencies of your project
@@ -90,5 +91,15 @@ jacocoTestReport {
         xml.enabled false
         csv.enabled false
         html.destination "${buildDir}/jacocoHtml"
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
     }
 }
