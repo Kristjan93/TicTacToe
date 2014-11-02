@@ -13,7 +13,11 @@ apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'pmd'
-apply plugin: 'com.github.kt3k.coveralls'
+apply plugin: 'base'
+
+jacoco {
+        toolVersion = '0.7.1.201405082137'
+}
 
 mainClassName = "is.kings.TicTacToeWeb"
 // In this section you declare where to find the dependencies of your project
@@ -33,6 +37,7 @@ dependencies {
     compile 'org.slf4j:slf4j-api:1.7.5'
     compile 'com.sparkjava:spark-core:1.1.1'
 
+    testCompile 'junit:junit:4.11'
     seleniumCompile 'junit:junit:4.11'
     seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
 
@@ -87,23 +92,24 @@ jar{
 }
 task stage { dependsOn clean,  installApp }
 
-jacocoTestReport{
-   
-   reports {
-
-	xml.enabled true
-        csv.enabled false
-        html.destination "${buildDir}/jacocoHtml"
-   }
+jacocoTestReport {
+        reports {
+            html.enabled = true
+            xml.enabled = true
+            csv.enabled = false
+        }
 }
 
 
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
+task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
+    dependsOn = subprojects.test
+    sourceDirectories = files(subprojects.sourceSets.main.allSource.srcDirs)
+    classDirectories =  files(subprojects.sourceSets.main.output)
+    executionData = files(subprojects.jacocoTestReport.executionData)
+    reports {
+        html.enabled = true
+        xml.enabled = true
+        csv.enabled = false
     }
 }
+

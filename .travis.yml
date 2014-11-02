@@ -6,6 +6,7 @@ script:
  - ./gradlew check
  - ./gradlew clean
  - ./gradlew seleniumXvfb
+ - ./gradlew build jacocoTestReport
 
 deploy:
  provider: heroku
@@ -15,7 +16,8 @@ deploy:
  on: jacocoTestReportFix
 
 env:
-- TERM=dumb
+  matrix:
+  - TERM=dumb
 
 after_success:
-- ./gradlew jacocoTestReport coveralls
+- ./gradlew jacocoRootReport coveralls
