@@ -6,6 +6,17 @@
  * For more details take a look at the Java Quickstart chapter in the Gradle
  * user guide available at http://gradle.org/docs/2.1/userguide/tutorial_java_projects.html
  */
+//Import the doxygen dependency
+import org.ysb33r.gradle.doxygen.Doxygen;
+buildscript { 
+  repositories {
+    jcenter()
+  }  
+  dependencies {
+    classpath 'org.ysb33r.gradle:doxygen:0.2'
+  }
+}
+
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
@@ -36,7 +47,7 @@ dependencies {
 
     seleniumXvfbCompile 'junit:junit:4.11'
     seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
-    
+
     // Declare the dependency for your favourite test framework you want to use in your tests.
     // TestNG is also supported by the Gradle Test task. Just change the
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
@@ -85,10 +96,19 @@ jar{
 }
 task stage { dependsOn clean,  installApp }
 
-jacocoTestReport {
-    reports {
-        xml.enabled false
+jacocoTestReport{
+   
+   reports {
+
+	xml.enabled false
         csv.enabled false
         html.destination "${buildDir}/jacocoHtml"
-    }
+   }
+}
+
+task doxyDoc(type:Doxygen){
+ generate_html true
+ generate_latex false
+ exclude 'TicTacToe.java', 'TicTacToeWeb.java'
+ source new File(projectDir, 'src/main/java/is/kings')
 }
