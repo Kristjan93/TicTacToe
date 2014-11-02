@@ -4,7 +4,6 @@ jdk:
 script:
  - ./gradlew clean
  - ./gradlew check
- - ./gradlew doxyDoc
  - ./gradlew clean
  - ./gradlew seleniumXvfb
 
@@ -13,5 +12,3 @@ deploy:
  app: amazinggames
  api_key: e259cfed-ca31-4ac7-bad6-787620b3561e
  strategy: git
- on: 
-  all_branches: true

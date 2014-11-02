@@ -7,22 +7,12 @@
  * user guide available at http://gradle.org/docs/2.1/userguide/tutorial_java_projects.html
  */
 
-import org.ysb33r.gradle.doxygen.Doxygen;
-buildscript { 
-  repositories {
-    jcenter()
-  }  
-  dependencies {
-    classpath 'org.ysb33r.gradle:doxygen:0.2'
-  }
-}
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'pmd'
-apply plugin: 'org.ysb33r.doxygen'
 
 mainClassName = "is.kings.TicTacToeWeb"
 // In this section you declare where to find the dependencies of your project
@@ -97,7 +87,6 @@ jar{
 task stage { dependsOn clean,  installApp }
 
 jacocoTestReport{
-   executionData test, seleniumXvfb
    
    reports {
 
@@ -105,33 +94,5 @@ jacocoTestReport{
         csv.enabled false
         html.destination "${buildDir}/jacocoHtml"
    }
-}
-task mergedData(type: JacocoMerge) {
-    // can pass in any task set up for Jacoco
-    executionData test, seleniumXvfb
-}
-task jacocoReport(type: JacocoReport) {
-    // can include one or more execution files
-    executionData test, seleniumXvfb
-
-   reports {
-
-        xml.enabled false
-        csv.enabled false
-        html.destination "${buildDir}/jacocoMerge"
-   }
-    // specify one or more source sets that you want to report on the coverage of
-    sourceSets project.sourceSets.main
-
-    // can also specify additional class and source dirs
-    // additionalClassDirs moreStuff
-    // additionalSourceDirs moreSourceStuff
-}
-task doxyDoc(type:Doxygen){
- generate_html true
- generate_latex false
- exclude 'TicTacToe.java', 'TicTacToeWeb.java'
- source new File(projectDir, 'src/main/java/is/kings') 
- template 'Doxyfile'
 }
 
