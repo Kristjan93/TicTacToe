@@ -129,8 +129,8 @@ task jacocoReport(type: JacocoReport) {
 doxygen{
  generate_html true
  generate_latex false
+ exclude 'TicTacToe.java', 'TicTacToeWeb.java'
  source new File(projectDir, 'src/main/java/is/kings') 
-
+ template 'Doxyfile'
 }
 
-check { dependsOn doxygen }

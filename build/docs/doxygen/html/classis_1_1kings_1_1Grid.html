@@ -61,7 +61,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -93,27 +92,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">is.kings.Grid Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class that will perfom basic grid functions.  
+ <a href="classis_1_1kings_1_1Grid.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a206c7da1c3fa5c6d7f4e25f01758c17a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classis_1_1kings_1_1Grid.html#a206c7da1c3fa5c6d7f4e25f01758c17a">Grid</a> ()</td></tr>
+<tr class="memdesc:a206c7da1c3fa5c6d7f4e25f01758c17a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor.  <a href="#a206c7da1c3fa5c6d7f4e25f01758c17a">More...</a><br/></td></tr>
 <tr class="separator:a206c7da1c3fa5c6d7f4e25f01758c17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac38cf5099caf7397361e15623eb655f5"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classis_1_1kings_1_1Grid.html#ac38cf5099caf7397361e15623eb655f5">printGrid</a> ()</td></tr>
+<tr class="memitem:ac38cf5099caf7397361e15623eb655f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac38cf5099caf7397361e15623eb655f5"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classis_1_1kings_1_1Grid.html#ac38cf5099caf7397361e15623eb655f5">printGrid</a> ()</td></tr>
+<tr class="memdesc:ac38cf5099caf7397361e15623eb655f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that prints out the game grid. <br/></td></tr>
 <tr class="separator:ac38cf5099caf7397361e15623eb655f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6a579bc0d34778987c9bac9aeb1e227"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classis_1_1kings_1_1Grid.html#af6a579bc0d34778987c9bac9aeb1e227">insertToGridPosition</a> (int thePosition, char humanOrComputer)</td></tr>
+<tr class="memdesc:af6a579bc0d34778987c9bac9aeb1e227"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that inserts a sign into the grid.  <a href="#af6a579bc0d34778987c9bac9aeb1e227">More...</a><br/></td></tr>
 <tr class="separator:af6a579bc0d34778987c9bac9aeb1e227"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eaa31f30e45d8d00a984060bceae7d2"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classis_1_1kings_1_1Grid.html#a4eaa31f30e45d8d00a984060bceae7d2">gameConclusion</a> ()</td></tr>
+<tr class="memdesc:a4eaa31f30e45d8d00a984060bceae7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that checks if there is a winner or there is a draw.  <a href="#a4eaa31f30e45d8d00a984060bceae7d2">More...</a><br/></td></tr>
 <tr class="separator:a4eaa31f30e45d8d00a984060bceae7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class that will perfom basic grid functions. Moving signs to the grid, check winner and print out the grid. </p>
+<div class="textblock"><p>A class that will perfom basic grid functions. </p>
+<p>Moving signs to the grid, check winner and print out the grid. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a206c7da1c3fa5c6d7f4e25f01758c17a"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">is.kings.Grid.Grid </td>
@@ -122,13 +127,10 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>A constructor. Sets all grid squares with character '.' and marked value false. </p>
+
+<p>A constructor. </p>
+<p>Sets all grid squares with character '.' and marked value false. </p>
 
 </div>
 </div>
@@ -136,9 +138,6 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a4eaa31f30e45d8d00a984060bceae7d2"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">boolean is.kings.Grid.gameConclusion </td>
@@ -147,12 +146,8 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
 <p>A function that checks if there is a winner or there is a draw. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if game is over, else false. </dd></dl>
 
@@ -161,9 +156,6 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="af6a579bc0d34778987c9bac9aeb1e227"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">boolean is.kings.Grid.insertToGridPosition </td>
@@ -183,12 +175,8 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
 <p>A function that inserts a sign into the grid. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -201,37 +189,13 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac38cf5099caf7397361e15623eb655f5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">String is.kings.Grid.printGrid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>A function that prints out the game grid. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/main/java/is/kings/Grid.java</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 2 2014 14:23:06 for TicTacToe by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 2 2014 14:58:58 for TicTacToe by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
