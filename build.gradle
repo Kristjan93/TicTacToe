@@ -7,6 +7,7 @@
  * user guide available at http://gradle.org/docs/2.1/userguide/tutorial_java_projects.html
  */
 
+import org.ysb33r.gradle.doxygen.Doxygen;
 buildscript { 
   repositories {
     jcenter()
@@ -126,7 +127,7 @@ task jacocoReport(type: JacocoReport) {
     // additionalClassDirs moreStuff
     // additionalSourceDirs moreSourceStuff
 }
-doxygen{
+task doxyDoc(type:Doxygen){
  generate_html true
  generate_latex false
  exclude 'TicTacToe.java', 'TicTacToeWeb.java'
