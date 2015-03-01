@@ -1,6 +1,3 @@
-TicTacToe
-=========
+#TicTacToe
+  * TicTacToe is a project built using agile and test driven development.  The game was available using the server host Heroku.  Selenium was used for end-to-end tests and information concerning the tests later diploid to the web using Travis.
 
-Amazing TicTacToe game!
-This is the travis build status for the travisSetUp branch:
-![alt text](https://travis-ci.org/7kings/TicTacToe.svg?branch=master "Travis status")
