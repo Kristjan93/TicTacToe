@@ -2,6 +2,7 @@
 > The main focus of this project is on the infrastructure and best coding practices.
 
 TicTacToe is a project built using agile and test driven development.  The game was available using the server host Heroku.  Selenium was used for end-to-end tests and information concerning the tests later deployed to the web using Travis.
+I recommend playing the game until you beat the inferior AI then feel good about your self(it's the little things in life).
 
 * The site is hosted on Heroku and you can play the game [here!]( https://amazing-tic-tac-toe-game.herokuapp.com/)
 * More information on the requirements can be found in the assignment.pdf file.
