@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.kings.ComputerPlayerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2014-11-02T19:11:02" hostname="i-d8dcceb3" time="0.014">
+<testsuite name="is.kings.ComputerPlayerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-08-22T15:18:47" hostname="Kristjans-MBP.lan" time="0.006">
   <properties/>
-  <testcase name="testInsertOnAFullTable" classname="is.kings.ComputerPlayerTest" time="0.003"/>
-  <testcase name="testComputerMove" classname="is.kings.ComputerPlayerTest" time="0.001"/>
+  <testcase name="testInsertOnAFullTable" classname="is.kings.ComputerPlayerTest" time="0.005"/>
+  <testcase name="testComputerMove" classname="is.kings.ComputerPlayerTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

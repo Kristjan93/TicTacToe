@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.kings.HumanPlayerTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2014-11-02T19:11:02" hostname="i-d8dcceb3" time="0.045">
+<testsuite name="is.kings.HumanPlayerTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2017-08-22T15:18:47" hostname="Kristjans-MBP.lan" time="0.007">
   <properties/>
-  <testcase name="testCheckInput" classname="is.kings.HumanPlayerTest" time="0.003"/>
+  <testcase name="testCheckInput" classname="is.kings.HumanPlayerTest" time="0.001"/>
   <testcase name="testCheckInputForANumberThatIsTooSmall" classname="is.kings.HumanPlayerTest" time="0.0"/>
-  <testcase name="tryToMovePlayerTwiceToTheSameField" classname="is.kings.HumanPlayerTest" time="0.006"/>
-  <testcase name="testCheckInputForChar" classname="is.kings.HumanPlayerTest" time="0.001"/>
-  <testcase name="testToMovePlayerIntoAMarkedField" classname="is.kings.HumanPlayerTest" time="0.001"/>
-  <testcase name="testCheckInputForANegativeNumber" classname="is.kings.HumanPlayerTest" time="0.001"/>
-  <testcase name="testCheckInputForTheNumberOne" classname="is.kings.HumanPlayerTest" time="0.007"/>
-  <testcase name="testPlayerMove" classname="is.kings.HumanPlayerTest" time="0.001"/>
+  <testcase name="tryToMovePlayerTwiceToTheSameField" classname="is.kings.HumanPlayerTest" time="0.001"/>
+  <testcase name="testCheckInputForChar" classname="is.kings.HumanPlayerTest" time="0.0"/>
+  <testcase name="testToMovePlayerIntoAMarkedField" classname="is.kings.HumanPlayerTest" time="0.0"/>
+  <testcase name="testCheckInputForANegativeNumber" classname="is.kings.HumanPlayerTest" time="0.0"/>
+  <testcase name="testCheckInputForTheNumberOne" classname="is.kings.HumanPlayerTest" time="0.001"/>
+  <testcase name="testPlayerMove" classname="is.kings.HumanPlayerTest" time="0.0"/>
   <testcase name="testCheckInputForString" classname="is.kings.HumanPlayerTest" time="0.001"/>
-  <testcase name="testCheckInputForSymbol" classname="is.kings.HumanPlayerTest" time="0.001"/>
+  <testcase name="testCheckInputForSymbol" classname="is.kings.HumanPlayerTest" time="0.0"/>
   <testcase name="testCheckInputForANumberThatIsTooBig" classname="is.kings.HumanPlayerTest" time="0.001"/>
-  <testcase name="testCheckInputForTheNumberFive" classname="is.kings.HumanPlayerTest" time="0.007"/>
-  <testcase name="testCheckInputForTheNumberNine" classname="is.kings.HumanPlayerTest" time="0.001"/>
+  <testcase name="testCheckInputForTheNumberFive" classname="is.kings.HumanPlayerTest" time="0.0"/>
+  <testcase name="testCheckInputForTheNumberNine" classname="is.kings.HumanPlayerTest" time="0.0"/>
   <system-out><![CDATA[Input is not in the right range
 Input has to be a number
 Input is not in the right range
